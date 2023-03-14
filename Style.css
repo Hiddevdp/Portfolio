@@ -47,17 +47,18 @@ nav a:hover{
     transition: 0.5s;
 }
 
-
-
 .content{
     padding: 10px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 300px 300px;
-    
+    text-decoration: none;
     gap:20px;
 }
-
+.content a{
+    text-decoration: none;
+    color: white;
+}
 .textfield{
     
     border-radius: 10px;
@@ -87,6 +88,25 @@ nav a:hover{
     
 }
 
-.aboutmeimg img{
+.content img{
     width: 100%;
+}
+
+.ProjectTile{
+    margin-top: 0px;
+    padding: 20px;
+    grid-row: 1/3;
+    grid-column: 2/4;
+    background-color: rgb(31, 31, 31);
+    height: fit-content;
+    border-radius: 10px;
+    width: 300px;
+}
+.ProjectTile img{
+    width: 300px;
+}
+.ProjectTile:hover{
+    transform: translateY(-5px);
+    background-color: rgb(49, 49, 49);
+    transition: 0.5s;
 }
