@@ -15,6 +15,10 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
   padding: 1em;
   display: flex;
   flex-direction: row;
@@ -43,8 +47,13 @@ h1 {
   color: white;
 }
 
+main {
+  margin-top: 7em;
+}
+
 article {
-  background-color: white;
+  color: black;
+  background-color: #86aba7;
   height: 15em;
   width: 80%;
   padding: 1em;
@@ -60,6 +69,7 @@ h2 {
 }
 
 p {
+  font-size: 1.5em;
   grid-area: 2/1/3/2;
   align-self: center;
 }
@@ -77,21 +87,21 @@ article:hover img {
   height: 19em;
 }
 
-main > section {
-  overflow-x: scroll;
-}
-
 main > section ul {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 main > section > ul > a {
   text-decoration: none;
   background-color: white;
   border-radius: 1em;
-  width: 20em;
-  height: 20em;
+  width: 25em;
+  height: 25em;
   margin: 1em;
   flex-shrink: 0;
   transition: 0.5s;
@@ -138,4 +148,13 @@ main > section > ul > a:nth-of-type(4) > img {
 main > section > ul > a:nth-of-type(5) > img {
   width: 120%;
   height: auto;
+}
+
+footer {
+  color: white;
+  background-color: rgb(25, 43, 43);
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
