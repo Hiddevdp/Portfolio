@@ -99,15 +99,43 @@ main > section > ul > a {
   background-position: top;
   background-repeat: no-repeat;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 hgroup {
+  position: absolute;
+  top: 0;
   color: white;
-  padding: 1em;
-  margin: -2px;
-  background-color: rgba(0, 0, 0, 0.582);
+  padding: 0.5em 1em;
+  /* background-color: rgba(0, 0, 0, 0.582); */
+  background-image: linear-gradient(
+    rgba(32, 32, 32, 0.596) 30%,
+    rgba(255, 255, 255, 0)
+  );
+  z-index: 1;
+  width: 100%;
 }
 
 main > section > ul > a:hover {
   transform: scale(1.05);
+}
+
+main > section > ul > a:hover img {
+  transform: scale(0.9);
+}
+
+main > section > ul > a > img {
+  position: absolute;
+  top: 0;
+  height: 120%;
+}
+main > section > ul > a:nth-of-type(4) > img {
+  left: -5em;
+}
+
+main > section > ul > a:nth-of-type(5) > img {
+  width: 120%;
+  height: auto;
 }
