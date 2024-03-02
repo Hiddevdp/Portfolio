@@ -7,7 +7,7 @@
 
 /* Set font styles */
 body {
-  background-image: linear-gradient(rgb(255, 0, 191), blue);
+  background-color: darkslategrey;
   min-height: 100vh;
   font-family: "Segoe UI";
   font-size: 16px;
@@ -15,7 +15,6 @@ body {
 }
 
 header {
-  height: 5em;
   padding: 1em;
   display: flex;
   flex-direction: row;
@@ -50,8 +49,7 @@ article {
   width: 80%;
   padding: 1em;
   border-radius: 1em;
-  margin: 0 auto;
-  margin-top: 5em;
+  margin: 5em auto 5em auto;
   display: grid;
   grid-template: 1fr 5fr/1fr 1fr;
   position: relative;
@@ -76,5 +74,40 @@ img {
   transition: 0.5s;
 }
 article:hover img {
+  height: 19em;
+}
+
+main > section {
+  overflow-x: scroll;
+}
+
+main > section ul {
+  display: flex;
+  flex-direction: row;
+}
+
+main > section > ul > a {
+  text-decoration: none;
+  background-color: white;
+  border-radius: 1em;
+  width: 20em;
   height: 20em;
+  margin: 1em;
+  flex-shrink: 0;
+  transition: 0.5s;
+  background-size: 200%;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+hgroup {
+  color: white;
+  padding: 1em;
+  margin: -2px;
+  background-color: rgba(0, 0, 0, 0.582);
+}
+
+main > section > ul > a:hover {
+  transform: scale(1.05);
 }
