@@ -7,15 +7,23 @@
 
 /* Set font styles */
 body {
-  background-color: darkslategrey;
+  background-color: rgb(53, 53, 53);
   min-height: 100vh;
-  font-family: "Segoe UI";
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 16px;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   z-index: 99;
   width: 100%;
@@ -34,17 +42,55 @@ nav ul {
 
 nav ul li {
   color: white;
-  margin: 0 1em;
   list-style: none;
+  transition: 0.2s;
+
+  &:hover {
+    scale: 1.2;
+  }
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 1em;
+  &:hover {
+    animation: rainbow 2s infinite;
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
 }
 
 h1 {
   color: white;
+
+  &:hover {
+    animation: rainbow 2s infinite;
+  }
 }
 
 main {
@@ -52,8 +98,8 @@ main {
 }
 
 article {
-  color: black;
-  background-color: #86aba7;
+  color: white;
+  background-color: rgb(88, 88, 88);
   height: 15em;
   width: 80%;
   padding: 1em;
@@ -62,6 +108,7 @@ article {
   display: grid;
   grid-template: 1fr 5fr/1fr 1fr;
   position: relative;
+  border: 2px solid white;
 }
 
 h2 {
@@ -74,7 +121,7 @@ p {
   align-self: center;
 }
 
-img {
+.idImg {
   height: 18em;
   grid-area: 1/2/3/3;
   justify-self: center;
@@ -103,15 +150,13 @@ main > section > ul > a {
   width: 25em;
   height: 25em;
   margin: 1em;
-  flex-shrink: 0;
   transition: 0.5s;
-  background-size: 200%;
-  background-position: top;
-  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 hgroup {
@@ -137,24 +182,26 @@ main > section > ul > a:hover img {
 }
 
 main > section > ul > a > img {
-  position: absolute;
-  top: 0;
   height: 120%;
-}
-main > section > ul > a:nth-of-type(4) > img {
-  left: -5em;
+  transition: 0.5s;
 }
 
 main > section > ul > a:nth-of-type(5) > img {
   width: 120%;
   height: auto;
+  height: auto;
 }
 
 footer {
   color: white;
-  background-color: rgb(25, 43, 43);
+  /* background-color: rgb(8, 8, 8); */
   height: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+footer p {
+  font-size: 1em;
 }
