@@ -8,7 +8,19 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, ".")));
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", { body: "aboutMe" });
+});
+
+app.get("/projecten", (req, res) => {
+  res.render("index", { body: "projecten" });
+});
+
+app.get("/cv", (req, res) => {
+  res.render("index", { body: "cv" });
+});
+
+app.get("/contact", (req, res) => {
+  res.render("index", { body: "contact" });
 });
 
 const PORT = process.env.PORT || 3000;
