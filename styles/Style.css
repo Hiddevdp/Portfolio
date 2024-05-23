@@ -91,9 +91,10 @@ nav ul li {
 }
 
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 157px);
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -155,14 +156,14 @@ article:hover img {
 
 main > section {
   height: 50vh;
-  width: 60vw;
+  width: 75vw;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 10em;
+  margin: 6em 10em 0 0;
 }
 
 main > section > a {
