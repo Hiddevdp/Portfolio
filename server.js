@@ -23,6 +23,14 @@ app.get("/contact", (req, res) => {
   res.render("index", { body: "contact" });
 });
 
+app.get("/projecten/project-tech", (req, res) => {
+  res.render("index", { body: "projectTech" });
+});
+
+app.get("/projecten/3d", (req, res) => {
+  res.render("index", { body: "3d" });
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

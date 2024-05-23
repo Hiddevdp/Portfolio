@@ -91,15 +91,17 @@ nav ul li {
 }
 
 main {
-  min-height: calc(100vh - 157px);
+  min-height: calc(100vh - 138px);
+  /* Hoogte scherm - (hoogte header + hoogte footer) */
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow-x: hidden;
 }
 
 h1 {
-  font-size: 5rem;
-  background: linear-gradient(270deg, limegreen, purple, crimson);
+  font-size: 4rem;
+  background: linear-gradient(90deg, limegreen, purple, crimson);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -119,7 +121,7 @@ h1 {
   }
 }
 
-article {
+.persInfo {
   color: white;
   background-color: rgb(37, 37, 37);
   height: 15em;
@@ -130,15 +132,15 @@ article {
   display: grid;
   grid-template: 1fr 5fr/1fr 1fr;
   position: relative;
-}
 
-h2 {
-  grid-area: 1/1/2/2;
-}
+  h2 {
+    grid-area: 1/1/2/2;
+  }
 
-p {
-  grid-area: 2/1/3/2;
-  align-self: center;
+  p {
+    grid-area: 2/1/3/2;
+    align-self: center;
+  }
 }
 
 .idImg {
@@ -150,7 +152,8 @@ p {
   bottom: -1em;
   transition: 0.5s;
 }
-article:hover img {
+.persInfo:hover img,
+.persInfo:focus img {
   height: 19em;
 }
 
@@ -184,6 +187,7 @@ main > section > a {
   flex-shrink: 0;
   box-shadow: 5px 5px 30px 0 black;
   position: absolute;
+
   &:first-of-type {
     left: calc((100% - 125px) / 7 * 1 - 12.5em);
     bottom: calc((100% - 125px) / 7 * 1 - 12.5em);
@@ -241,11 +245,13 @@ hgroup {
   width: 100%;
 }
 
-main > section > a:hover {
+main > section > a:hover,
+main > section > a:focus {
   transform: scale(1.05) translateX(15em);
 }
 
-main > section > a:hover img {
+main > section > a:hover img,
+main > section > a:focus img {
   transform: scale(0.9);
 }
 
@@ -258,6 +264,10 @@ main > section > a:nth-of-type(5) > img {
   width: 120%;
   height: auto;
   height: auto;
+}
+
+.projectInfo {
+  color: white;
 }
 
 footer {
