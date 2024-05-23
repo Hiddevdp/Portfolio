@@ -156,14 +156,15 @@ article:hover img {
 
 main > section {
   height: 50vh;
-  width: 75vw;
+  width: 70vw;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 6em 10em 0 0;
+  margin: 7.5em 10em 0 0;
+  z-index: 999;
 }
 
 main > section > a {
