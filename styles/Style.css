@@ -7,13 +7,13 @@
 
 /* Set font styles */
 body {
-  /* background-color: rgb(53, 53, 53); */
+  background-color: rgb(24, 24, 24);
 
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgba(0, 22, 65, 1) 0%,
     rgba(0, 42, 116, 1) 100%
-  );
+  ); */
 
   min-height: 100vh;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -32,7 +32,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(rgb(44, 44, 44), rgba(255, 255, 255, 0));
+  /* background-image: linear-gradient(rgb(44, 44, 44), rgba(255, 255, 255, 0)); */
 }
 
 nav ul {
