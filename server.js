@@ -11,25 +11,25 @@ app.get("/", (req, res) => {
   res.render("index", { body: "aboutMe" });
 });
 
-app.get("/projecten", (req, res) => {
-  res.render("index", { body: "projecten" });
+app.get("/:viewname", (req, res) => {
+  res.render("index", { body: req.params.viewname });
 });
 
-app.get("/cv", (req, res) => {
-  res.render("index", { body: "cv" });
+// app.get("/cv", (req, res) => {
+//   res.render("index", { body: "cv" });
+// });
+
+// app.get("/contact", (req, res) => {
+//   res.render("index", { body: "contact" });
+// });
+
+app.get("/projecten/:viewname", (req, res) => {
+  res.render("index", { body: req.params.viewname });
 });
 
-app.get("/contact", (req, res) => {
-  res.render("index", { body: "contact" });
-});
-
-app.get("/projecten/project-tech", (req, res) => {
-  res.render("index", { body: "projectTech" });
-});
-
-app.get("/projecten/3d", (req, res) => {
-  res.render("index", { body: "3d" });
-});
+// app.get("/projecten/3d", (req, res) => {
+//   res.render("index", { body: "3d" });
+// });
 
 const PORT = process.env.PORT || 3000;
 
