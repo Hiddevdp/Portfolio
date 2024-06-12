@@ -99,6 +99,7 @@ main {
 
 .swiper-container {
   margin: auto 0;
+  width: 100vw;
 }
 
 .swiper-slide {
@@ -197,7 +198,6 @@ h1 {
 .project {
   text-decoration: none;
   background-color: white;
-  border-radius: 1em;
   width: 25em;
   height: 35em;
   margin: 1em;
@@ -223,18 +223,38 @@ hgroup {
   height: 10em;
 }
 
+.backLink {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .project > img {
-  height: 120%;
+  height: 100%;
   transition: 0.5s;
 }
 
 .projectInfo {
   color: white;
-}
+  background-color: rgb(37, 37, 37);
+  width: 80%;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 5em auto 5em auto;
 
-.projectInfo img {
-  width: 10em;
-  height: auto;
+  h2,
+  p,
+  img {
+    margin-bottom: 1em;
+  }
+
+  img {
+    width: 40em;
+  }
 }
 
 footer {
