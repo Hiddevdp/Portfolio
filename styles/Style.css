@@ -15,7 +15,6 @@ body {
     rgba(0, 42, 116, 1) 100%
   ); */
 
-  min-height: 100vh;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   display: flex;
@@ -92,11 +91,26 @@ nav ul li {
 
 main {
   min-height: calc(100vh - 138px);
-  /* Hoogte scherm - (hoogte header + hoogte footer) */
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   overflow-x: hidden;
+}
+
+.swiper-container {
+  margin: auto 0;
+  width: 100vw;
+}
+
+.swiper-slide {
+  width: unset !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: unset !important;
 }
 
 h1 {
@@ -107,6 +121,30 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient 10s linear infinite;
+}
+
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    position: relative;
+  }
+  header h1 {
+    font-size: 3em;
+    margin-top: -1px;
+  }
+  nav {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1em;
+  }
+
+  a.project {
+    width: 80vw;
+    height: 25em;
+  }
+  footer {
+    display: none !important;
+  }
 }
 
 @keyframes gradient {
@@ -157,25 +195,11 @@ h1 {
   height: 19em;
 }
 
-main > section {
-  height: 50vh;
-  width: 70vw;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 7.5em 10em 0 0;
-  z-index: 999;
-}
-
-main > section > a {
+.project {
   text-decoration: none;
   background-color: white;
-  border-radius: 1em;
   width: 25em;
-  height: 25em;
+  height: 35em;
   margin: 1em;
   transition: 0.5s;
   overflow: hidden;
@@ -186,49 +210,6 @@ main > section > a {
   align-items: center;
   flex-shrink: 0;
   box-shadow: 5px 5px 30px 0 black;
-  position: absolute;
-
-  &:first-of-type {
-    left: calc((100% - 125px) / 7 * 1 - 12.5em);
-    bottom: calc((100% - 125px) / 7 * 1 - 12.5em);
-    z-index: 7;
-  }
-
-  &:nth-of-type(2) {
-    left: calc((100% - 125px) / 7 * 2 - 12.5em);
-    bottom: calc((100% - 125px) / 7 * 2 - 12.5em);
-    z-index: 6;
-  }
-
-  &:nth-of-type(3) {
-    left: calc((100% - 125px) / 7 * 3 - 12.5em);
-    bottom: calc((100% - 125px) / 7 * 3 - 12.5em);
-    z-index: 5;
-  }
-
-  &:nth-of-type(4) {
-    left: calc((100% - 125px) / 7 * 4 - 12.5em);
-    bottom: calc((100% - 125px) / 7 * 4 - 12.5em);
-    z-index: 4;
-  }
-
-  &:nth-of-type(5) {
-    left: calc((100% - 125px) / 7 * 5 - 12.5em);
-    bottom: calc((100% - 125px) / 7 * 5 - 12.5em);
-    z-index: 3;
-  }
-
-  &:nth-of-type(6) {
-    left: calc((100% - 125px) / 7 * 6 - 12.5em);
-    bottom: calc((100% - 125px) / 7 * 6 - 12.5em);
-    z-index: 2;
-  }
-
-  &:nth-of-type(7) {
-    left: calc((100% - 125px) / 7 * 7 - 12.5em);
-    bottom: calc((100% - 125px) / 7 * 7 - 12.5em);
-    z-index: 1;
-  }
 }
 
 hgroup {
@@ -236,43 +217,44 @@ hgroup {
   top: 0;
   color: white;
   padding: 0.5em 1em;
-  /* background-color: rgba(0, 0, 0, 0.582); */
-  background-image: linear-gradient(
-    rgba(32, 32, 32, 0.596) 30%,
-    rgba(255, 255, 255, 0)
-  );
+  background-image: linear-gradient(rgb(32, 32, 32), rgba(255, 255, 255, 0));
   z-index: 1;
   width: 100%;
+  height: 10em;
 }
 
-main > section > a:hover,
-main > section > a:focus {
-  transform: scale(1.05) translateX(15em);
+.backLink {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-main > section > a:hover img,
-main > section > a:focus img {
-  transform: scale(0.9);
-}
-
-main > section > a > img {
-  height: 120%;
+.project > img {
+  height: 100%;
   transition: 0.5s;
-}
-
-main > section > a:nth-of-type(5) > img {
-  width: 120%;
-  height: auto;
-  height: auto;
 }
 
 .projectInfo {
   color: white;
-}
+  background-color: rgb(37, 37, 37);
+  width: 80%;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 5em auto 5em auto;
 
-.projectInfo img {
-  width: 10em;
-  height: auto;
+  h2,
+  p,
+  img {
+    margin-bottom: 1em;
+  }
+
+  img {
+    width: 40em;
+  }
 }
 
 footer {
