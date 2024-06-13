@@ -241,7 +241,7 @@ hgroup {
 .projectInfo {
   color: white;
   background-color: rgb(37, 37, 37);
-  width: 80%;
+  width: 60%;
   padding: 1em;
   border-radius: 1em;
   margin: 5em auto 5em auto;
@@ -251,9 +251,13 @@ hgroup {
   img {
     margin-bottom: 1em;
   }
-
+  a {
+    display: block;
+    margin-bottom: 1em;
+    color: aqua;
+  }
   img {
-    width: 40em;
+    height: 20em;
   }
 }
 
