@@ -126,10 +126,6 @@ h1 {
   animation: gradient 10s linear infinite;
 }
 
-ul {
-  margin: 0 2em;
-}
-
 @media (max-width: 640px) {
   header {
     flex-direction: column;
@@ -140,14 +136,44 @@ ul {
     margin-top: -1px;
   }
   nav {
+    display: flex;
+    justify-content: center;
     position: fixed;
     bottom: 0;
-    margin-bottom: 1em;
+    padding: 1em 0;
+    background-color: rgb(24, 24, 24);
+    ul {
+      width: 100vw;
+    }
+    a {
+      padding: 15px !important;
+    }
+  }
+  .persInfo {
+    overflow: hidden;
+    width: 90% !important;
+    h2 {
+      grid-column: 1/-1 !important;
+    }
+    img {
+      height: 20em;
+      right: -7em;
+    }
+  }
+
+  .skills {
+    width: 90% !important;
+    flex-direction: column !important;
+    margin-bottom: 5em !important;
   }
 
   a.project {
     width: 80vw;
     height: 25em;
+  }
+
+  .projectInfo {
+    width: 90% !important;
   }
   footer {
     display: none !important;
@@ -206,6 +232,7 @@ ul {
 
   ul {
     list-style: none;
+    margin: 0 2em;
 
     li {
       margin: 0.5em 0;
@@ -345,6 +372,9 @@ hgroup {
   }
   img {
     height: 20em;
+  }
+  ul {
+    margin: 0 2em;
   }
 }
 
