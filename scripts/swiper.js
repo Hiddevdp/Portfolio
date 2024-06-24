@@ -3,6 +3,7 @@ var swiper = new Swiper(".swiper-container", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
+  initialSlide: localStorage.getItem("swiperSlideIndex") || 0,
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -16,5 +17,10 @@ var swiper = new Swiper(".swiper-container", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  on: {
+    slideChange: function () {
+      localStorage.setItem("swiperSlideIndex", this.activeIndex);
+    },
   },
 });
