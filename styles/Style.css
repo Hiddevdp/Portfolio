@@ -37,6 +37,7 @@ header {
 
 nav ul {
   display: flex;
+  justify-content: center;
 }
 
 nav ul li {
@@ -126,7 +127,7 @@ h1 {
   animation: gradient 10s linear infinite;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     position: relative;
@@ -152,19 +153,25 @@ h1 {
   .persInfo {
     overflow: hidden;
     width: 90% !important;
+    min-width: auto !important;
     h2 {
       grid-column: 1/-1 !important;
     }
     img {
-      height: 20em;
-      right: -7em;
+      height: 16em;
+      right: -5em;
     }
   }
 
   .skills {
     width: 90% !important;
+    min-width: auto !important;
     flex-direction: column !important;
     margin-bottom: 5em !important;
+
+    section:first-of-type {
+      width: auto !important;
+    }
   }
 
   a.project {
@@ -195,7 +202,8 @@ h1 {
 .persInfo {
   color: white;
   background-color: rgb(37, 37, 37);
-  width: 60em;
+  width: 60%;
+  min-width: 45em;
   padding: 1em;
   border-radius: 1em;
   margin: 5em 0 2.5em 0;
@@ -215,7 +223,8 @@ h1 {
 .skills {
   color: white;
   background-color: rgb(37, 37, 37);
-  width: 60em;
+  width: 60%;
+  min-width: 45em;
   padding: 1em;
   border-radius: 1em;
   margin: 2.5em 0 0 0;
