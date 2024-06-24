@@ -141,7 +141,7 @@ h1 {
     justify-content: center;
     position: fixed;
     bottom: 0;
-    padding: 1em 0;
+    padding: 1em 0 2em 0;
     background-color: rgb(24, 24, 24);
     ul {
       width: 100vw;
