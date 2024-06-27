@@ -15,21 +15,9 @@ app.get("/:viewname", (req, res) => {
   res.render("index", { body: req.params.viewname });
 });
 
-// app.get("/cv", (req, res) => {
-//   res.render("index", { body: "cv" });
-// });
-
-// app.get("/contact", (req, res) => {
-//   res.render("index", { body: "contact" });
-// });
-
 app.get("/projecten/:viewname", (req, res) => {
   res.render("index", { body: req.params.viewname });
 });
-
-// app.get("/projecten/3d", (req, res) => {
-//   res.render("index", { body: "3d" });
-// });
 
 const PORT = process.env.PORT || 3000;
 
