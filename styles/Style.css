@@ -3,6 +3,7 @@
 :root {
   --text-color: white;
   --h2-color: rgb(255, 0, 221);
+  --h3-color: rgb(37, 187, 0);
   --background-color: rgb(24, 24, 24);
   --background-color-2: rgb(37, 37, 37);
   --link-color: aqua;
@@ -353,10 +354,7 @@ hgroup {
   top: 0;
   color: var(--text-color);
   padding: 0.5em 1em;
-  background-image: linear-gradient(
-    var(--background-color-2),
-    rgba(255, 255, 255, 0)
-  );
+  background-image: linear-gradient(#101010, rgba(255, 255, 255, 0));
   z-index: 1;
   width: 100%;
   height: 10em;
@@ -435,11 +433,74 @@ hgroup {
   .mobile {
     width: 50%;
   }
+
   ul {
     margin: 0 2em;
+    align-self: start;
   }
+
   iframe {
     width: 100%;
+  }
+}
+
+.isgaSection {
+  display: flex;
+
+  img {
+    width: 12em !important;
+    margin: 0.5em;
+  }
+}
+
+.idImgWrapper {
+  background-color: var(--background-color);
+  width: 10em;
+  aspect-ratio: 1/1;
+  border-radius: 20%;
+  overflow: hidden;
+  position: absolute;
+  align-self: end;
+
+  img {
+    width: 100%;
+    margin-top: 1em;
+  }
+}
+
+.cv {
+  color: var(--text-color);
+  line-height: 2em;
+  background-color: var(--background-color-2);
+  width: 60%;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 2.5em;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  h2 {
+    color: var(--h2-color);
+  }
+  h3 {
+    color: var(--h3-color);
+  }
+
+  h2,
+  p,
+  img {
+    margin-bottom: 1em;
+  }
+}
+
+.contactImg {
+  width: 10em;
+  margin: 2em;
+  transition: 0.5s;
+  &:hover {
+    scale: 1.1;
   }
 }
 
