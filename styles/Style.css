@@ -5,7 +5,7 @@
   --h2-color: rgb(255, 0, 221);
   --h3-color: rgb(37, 187, 0);
   --background-color: rgb(24, 24, 24);
-  --background-color-2: rgb(37, 37, 37);
+  --background-color-2: rgba(255, 255, 255, 0.1);
   --link-color: aqua;
 }
 
@@ -20,7 +20,7 @@ body {
   background: linear-gradient(-45deg, #494949, #141112, #002f41, #31241e);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 100vh;
+  height: 100%;
 
   font-family: "Roboto Mono", monospace;
 
@@ -131,6 +131,10 @@ main {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .swiper-container {
@@ -363,6 +367,10 @@ h1 {
       transition: 0.2s;
     }
   }
+  video {
+    height: 100%;
+    z-index: -1;
+  }
 }
 
 hgroup {
@@ -383,9 +391,10 @@ hgroup {
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
-  padding: 1em;
+  padding: 1.5em;
   overflow: hidden;
-  border-radius: 1em;
+  border-radius: 5em;
+  line-height: 0;
 }
 
 .backLink::before {
@@ -395,7 +404,7 @@ hgroup {
   left: 50%;
   width: 30em; /* Large enough to cover the whole element when scaled */
   height: 30em; /* Large enough to cover the whole element when scaled */
-  background-color: rgb(37, 37, 37); /* The background color you want */
+  background-color: var(--background-color-2);
   border-radius: 500em;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.75s ease;
